@@ -1,0 +1,41 @@
+#include<iostream>
+using namespace std;
+
+class RectangleArea{
+	public:
+		void SetData(float L,float W);
+		float ComputeArea();
+		void OutputArea();
+	private:
+		float length,width,area;
+		
+};
+
+void RectangleArea::SetData(float L,float W){
+	length=L;
+	width=W;
+	
+}
+float RectangleArea::ComputeArea(){
+	area=length*width;
+	return area;
+	
+}
+
+void RectangleArea::OutputArea(){
+	cout<<"area="<<area<<endl;	
+		
+}
+int main(){
+	RectangleArea Rectangle;
+	Rectangle.SetData(8,9);
+	Rectangle.ComputeArea();
+	Rectangle.OutputArea();
+	return 0;	
+
+}
+
+//类的声明
+//类的成员实现
+//主函数
+
