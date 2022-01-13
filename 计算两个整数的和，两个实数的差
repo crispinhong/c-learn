@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+	int a,b,sum;
+	cout<<"please input 2 integers to a,b"<<endl;
+	cin>>a>>b;
+	sum=a+b;
+	int c,d,sub;
+	cout<<"please input 2 floats to c,d;"<<endl;
+	cin>>c>>d;
+	sub=c-d;
+	cout<<"a+b="<<sum<<endl;
+	cout<<"c-d="<<sub<<endl;
+	return 0;
+	
+}
