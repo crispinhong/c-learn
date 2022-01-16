@@ -1,0 +1,55 @@
+#include<iostream>
+using namespace std;
+
+class Point{
+	public:
+		Point(int ,int);
+		void displayxy();
+		~Point();
+	private:
+		int X,Y;
+	
+};
+
+Point::Point(int x,int y){
+	X=x;
+	Y=y;
+	cout<<"Constructor is called!";
+	displayxy();
+	
+}
+void Point::displayxy(){
+	
+	cout<<"("<<X<<","<<Y<<")"<<endl;
+	
+}
+
+Point::~Point(){
+	
+	cout<<"Destructor is called!";
+	displayxy();
+	
+}
+
+int main(){
+	
+	
+	Point p1(3,4),p2(5,6);
+	return 0;
+	
+}
+
+/*
+输出结果：
+Constructor is called!(3,4)
+Constructor is called!(5,6)
+Destructor is called!(5,6)
+Destructor is called!(3,4)
+
+
+
+声明了两个对象p1和p2，创建对象时调用构造函数，输出前两行结果。当程序结束时，释放了两个对象，析构函数被调用，输出后两行结果。
+构造函数的调用顺序和声明对象顺序一致，而析构函数的调用顺序与构造函数的调用顺序正好相反。 
+
+
+*/
